@@ -41,9 +41,9 @@ export default function App() {
 
     if (!values.password) {
       errors.password = "Password Required";
-    } else if (values.password.length < 7) {
+    } else if (values.password.length < 7 && values.password.length > 14) {
       errors.password =
-        "Password must be More than 7 characters nd speacial characters";
+        "Password must be More than 7 characters nd less than 14";
     }
 
     if (!values.phone) {
